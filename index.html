@@ -1,0 +1,1030 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTSI GROUPE - Expert en Cybersécurité</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 30px;
+            background: linear-gradient(120deg, #2c3e50, #1a2a3a);
+            color: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo-icon {
+            width: 60px;
+            height: 60px;
+            background: #3498db;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2rem;
+            font-weight: bold;
+            margin-right: 15px;
+            color: white;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 20px;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        nav ul li a:hover {
+            color: #3498db;
+        }
+        
+        .hero {
+            text-align: center;
+            padding: 60px 20px;
+            margin-bottom: 40px;
+            background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect fill="%23f8f9fa" width="100" height="100"/><path fill="%23e9ecef" d="M0 0h100v100H0z"/></svg>');
+            background-size: cover;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .hero h2 {
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 30px;
+            color: #555;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            background: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.3s;
+            margin: 5px;
+            text-decoration: none;
+        }
+        
+        .btn:hover {
+            background: #2980b9;
+        }
+        
+        .btn-outline {
+            background: transparent;
+            border: 2px solid #3498db;
+            color: #3498db;
+        }
+        
+        .btn-outline:hover {
+            background: #3498db;
+            color: white;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2rem;
+            color: #2c3e50;
+            position: relative;
+        }
+        
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: #3498db;
+            margin: 10px auto;
+            border-radius: 2px;
+        }
+        
+        .service-category {
+            margin: 40px 0 20px;
+            padding: 10px 15px;
+            background: #2c3e50;
+            color: white;
+            border-radius: 5px;
+            font-size: 1.4rem;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+        
+        .service-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .service-icon {
+            background: #3498db;
+            color: white;
+            font-size: 2rem;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .service-content {
+            padding: 20px;
+        }
+        
+        .service-content h3 {
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        
+        .service-content p {
+            color: #666;
+            margin-bottom: 15px;
+        }
+        
+        .service-details-btn {
+            padding: 8px 15px;
+            font-size: 0.9rem;
+        }
+        
+        .contact-info {
+            background: #2c3e50;
+            color: white;
+            padding: 40px 20px;
+            border-radius: 10px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .contact-info h2 {
+            margin-bottom: 20px;
+        }
+        
+        .contact-details {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 20px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #666;
+        }
+        
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .modal-content {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            max-width: 500px;
+            width: 90%;
+            position: relative;
+        }
+        
+        .close-modal {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+        #whatsappBtn {
+            background: #25D366;
+            margin-top: 15px;
+        }
+        
+        #whatsappBtn:hover {
+            background: #128C7E;
+        }
+        
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            nav ul {
+                margin-top: 20px;
+                justify-content: center;
+            }
+            
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-details {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <div class="logo-icon">O</div>
+                    <h1>OTSI GROUPE</h1>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#accueil">Accueil</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero" id="accueil">
+        <div class="container">
+            <h2>Expert en Cybersécurité et Solutions Informatiques</h2>
+            <p>Protégez votre entreprise contre les cybermenaces avec nos solutions de sécurité sur mesure et innovantes.</p>
+            <button class="btn" id="devisBtn">Demander un devis</button>
+            <button class="btn btn-outline" id="servicesBtn">Découvrir nos services</button>
+        </div>
+    </section>
+
+    <section id="services">
+        <div class="container">
+            <h2 class="section-title">Nos Services</h2>
+            
+            <h3 class="service-category">I. SERVICES DE CYBERSÉCURITÉ</h3>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Protection des données sensibles</h3>
+                        <p>Mise en œuvre de systèmes de prévention des pertes de données, cryptage et gestion des accès.</p>
+                        <button class="btn service-details-btn" data-service="1">En savoir plus</button>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-user-lock"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Gestion des accès et des identités</h3>
+                        <p>Contrôle d'accès, gestion des identités utilisateurs, authentification multifacteur et gestion des rôles.</p>
+                        <button class="btn service-details-btn" data-service="2">En savoir plus</button>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Surveillance continue de la sécurité (SOC)</h3>
+                        <p>Mise en place de systèmes de surveillance en temps réel, gestion des alertes et réponse aux incidents.</p>
+                        <button class="btn service-details-btn" data-service="3">En savoir plus</button>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Investigation des incidents de sécurité (Cyber Forensics)</h3>
+                        <p>Analyse des traces numériques, récupération de données et identification des attaquants.</p>
+                        <button class="btn service-details-btn" data-service="4">En savoir plus</button>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-tasks"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Évaluation de la sécurité</h3>
+                        <p>Tests d'intrusion, analyse des risques et audits de sécurité complets pour votre infrastructure.</p>
+                        <button class="btn service-details-btn" data-service="5">En savoir plus</button>
+                    </div>
+                </div>
+            </div>
+            
+            <h3 class="service-category">II. SERVICES RÉSEAUX ET INFRASTRUCTURE</h3>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Installation réseaux informatique</h3>
+                        <p>Conception et installation d'infrastructures réseau performantes et sécurisées.</p>
+                        <button class="btn service-details-btn" data-service="6">En savoir plus</button>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Installation et gestion de serveurs</h3>
+                        <p>Configuration, maintenance et supervision de serveurs physiques et virtuels.</p>
+                        <button class="btn service-details-btn" data-service="7">En savoir plus</button>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Conception et déploiement d'infrastructure réseau</h3>
+                        <p>Étude, planification et mise en œuvre d'architectures réseau adaptées à vos besoins.</p>
+                        <button class="btn service-details-btn" data-service="8">En savoir plus</button>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Solutions VPN et sécurisation des accès distants</h3>
+                        <p>Implantation de VPN et sécurisation des connexions pour les travailleurs à distance.</p>
+                        <button class="btn service-details-btn" data-service="9">En savoir plus</button>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-wifi"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Réseaux sans fil sécurisés (Wi-Fi)</h3>
+                        <p>Configuration de points d'accès avec chiffrement WPA3 et contrôle des accès.</p>
+                        <button class="btn service-details-btn" data-service="10">En savoir plus</button>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-desktop"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Sécurité réseaux et supervision</h3>
+                        <p>Surveillance continue, détection d'anomalies et protection contre les intrusions.</p>
+                        <button class="btn service-details-btn" data-service="11">En savoir plus</button>
+                    </div>
+                </div>
+            </div>
+            
+            <h3 class="service-category">III. SERVICES FORENSIQUES (ANALYSE NUMÉRIQUE)</h3>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Investigation des incidents de sécurité</h3>
+                        <p>Analyse approfondie des incidents de sécurité pour en déterminer l'origine et l'étendue.</p>
+                        <button class="btn service-details-btn" data-service="12">En savoir plus</button>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-box"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Collecte et préservation des preuves numériques</h3>
+                        <p>Méthodologies forensiques pour garantir l'intégrité des preuves numériques.</p>
+                        <button class="btn service-details-btn" data-service="13">En savoir plus</button>
+                    </div>
+                </div>
+            </div>
+            
+            <h3 class="service-category">IV. SERVICES DE RENFORCEMENT DES CAPACITÉS</h3>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-bug"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Simulations d'attaques (Red Teaming)</h3>
+                        <p>Conception de scénarios d'attaque réalistes pour tester la réactivité d'une organisation.</p>
+                        <button class="btn service-details-btn" data-service="14">En savoir plus</button>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Formations en cybersécurité</h3>
+                        <p>Sensibilisation aux cybermenaces et bonnes pratiques pour les employés.</p>
+                        <button class="btn service-details-btn" data-service="15">En savoir plus</button>
+                    </div>
+                </div>
+            </div>
+            
+            <h3 class="service-category">V. INTELLIGENCE ARTIFICIELLE ET AUTOMATISATION</h3>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Analyse comportementale basée sur l'IA</h3>
+                        <p>Analyse des comportements des utilisateurs et des systèmes pour détecter des anomalies.</p>
+                        <button class="btn service-details-btn" data-service="16">En savoir plus</button>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Détection des menaces par IA</h3>
+                        <p>Détection proactive des menaces via le machine learning.</p>
+                        <button class="btn service-details-btn" data-service="17">En savoir plus</button>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Automatisation de la gestion des incidents</h3>
+                        <p>Solutions d'automatisation pour une réponse plus rapide et efficace aux incidents.</p>
+                        <button class="btn service-details-btn" data-service="18">En savoir plus</button>
+                    </div>
+                </div>
+            </div>
+            
+            <h3 class="service-category">VI. SÉCURITÉ ÉLECTRONIQUE ET PHYSIQUE</h3>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-bell"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Systèmes de sécurité électronique (alarmes, détecteurs)</h3>
+                        <p>Installation d'alarmes, de détecteurs de mouvement et gestion des alertes.</p>
+                        <button class="btn service-details-btn" data-service="19">En savoir plus</button>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Vidéo surveillance (CCTV)</h3>
+                        <p>Mise en place de systèmes de surveillance vidéo avec enregistrement et analyse.</p>
+                        <button class="btn service-details-btn" data-service="20">En savoir plus</button>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-fingerprint"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Systèmes biométriques</h3>
+                        <p>Contrôle d'accès par empreintes digitales ou reconnaissance faciale.</p>
+                        <button class="btn service-details-btn" data-service="21">En savoir plus</button>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Contrôle à distance</h3>
+                        <p>Solutions de gestion et de surveillance à distance de vos systèmes de sécurité.</p>
+                        <button class="btn service-details-btn" data-service="22">En savoir plus</button>
+                    </div>
+                </div>
+            </div>
+            
+            <h3 class="service-category">VII. SERVICES DE TÉLÉCOMMUNICATION</h3>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-fiber-pin"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Installation de fibre optique</h3>
+                        <p>Déploiement d'infrastructures fibre optique pour des connexions haut débit.</p>
+                        <button class="btn service-details-btn" data-service="23">En savoir plus</button>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Réseaux téléphoniques d'entreprise (VoIP)</h3>
+                        <p>Mise en place de solutions téléphoniques modernes et économiques.</p>
+                        <button class="btn service-details-btn" data-service="24">En savoir plus</button>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Solutions de communication unifiée</h3>
+                        <p>Intégration de voix, vidéo, messagerie et partage de documents.</p>
+                        <button class="btn service-details-btn" data-service="25">En savoir plus</button>
+                    </div>
+                </div>
+            </div>
+            
+            <h3 class="service-category">VIII. SERVICES CLOUD ET HÉBERGEMENT</h3>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Hébergement de sites web et applications</h3>
+                        <p>Solutions d'hébergement performantes, sécurisées et évolutives.</p>
+                        <button class="btn service-details-btn" data-service="26">En savoir plus</button>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Solutions cloud privé et hybride</h3>
+                        <p>Conception et déploiement d'infrastructures cloud adaptées à vos besoins.</p>
+                        <button class="btn service-details-btn" data-service="27">En savoir plus</button>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Sauvegarde externalisée et reprise d'activité</h3>
+                        <p>Solutions de sauvegarde sécurisées et plans de reprise après sinistre.</p>
+                        <button class="btn service-details-btn" data-service="28">En savoir plus</button>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-exchange-alt"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Migration vers le cloud</h3>
+                        <p>Accompagnement dans la migration de vos infrastructures et applications.</p>
+                        <button class="btn service-details-btn" data-service="29">En savoir plus</button>
+                    </div>
+                </div>
+            </div>
+            
+            <h3 class="service-category">IX. DÉVELOPPEMENT ET INTÉGRATION</h3>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Développement d'applications sur mesure</h3>
+                        <p>Création de solutions logicielles adaptées à vos processus métier.</p>
+                        <button class="btn service-details-btn" data-service="30">En savoir plus</button>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-puzzle-piece"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Intégration de systèmes</h3>
+                        <p>Connexion de vos différents systèmes pour un flux de données optimisé.</p>
+                        <button class="btn service-details-btn" data-service="31">En savoir plus</button>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-plug"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Développement d'API</h3>
+                        <p>Création d'interfaces de programmation pour connecter vos applications.</p>
+                        <button class="btn service-details-btn" data-service="32">En savoir plus</button>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-mobile"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Applications mobiles (iOS et Android)</h3>
+                        <p>Développement d'applications natives et hybrides pour smartphones et tablettes.</p>
+                        <button class="btn service-details-btn" data-service="33">En savoir plus</button>
+                    </div>
+                </div>
+            </div>
+            
+            <h3 class="service-category">X. CONSEIL ET AUDIT</h3>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Audit de sécurité informatique</h3>
+                        <p>Évaluation complète de votre posture de sécurité et recommandations.</p>
+                        <button class="btn service-details-btn" data-service="34">En savoir plus</button>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Conseil en transformation digitale</h3>
+                        <p>Accompagnement dans la modernisation de vos processus et outils.</p>
+                        <button class="btn service-details-btn" data-service="35">En savoir plus</button>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Étude et optimisation des processus métier</h3>
+                        <p>Analyse et amélioration de vos flux de travail pour plus d'efficacité.</p>
+                        <button class="btn service-details-btn" data-service="36">En savoir plus</button>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-gavel"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Conformité réglementaire (RGPD, etc.)</h3>
+                        <p>Mise en conformité avec les réglementations en vigueur.</p>
+                        <button class="btn service-details-btn" data-service="37">En savoir plus</button>
+                    </div>
+                </div>
+            </div>
+            
+            <h3 class="service-category">XI. MAINTENANCE ET SUPPORT</h3>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Maintenance préventive et corrective</h3>
+                        <p>Entretien régulier et interventions curatives sur votre infrastructure.</p>
+                        <button class="btn service-details-btn" data-service="38">En savoir plus</button>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Support technique 24/7</h3>
+                        <p>Assistance technique permanente pour résoudre vos problèmes.</p>
+                        <button class="btn service-details-btn" data-service="39">En savoir plus</button>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-laptop"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Gestion de parc informatique</h3>
+                        <p>Administration complète de votre parc matériel et logiciel.</p>
+                        <button class="btn service-details-btn" data-service="40">En savoir plus</button>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Externalisation de la DSI</h3>
+                        <p>Prise en charge complète ou partielle de votre direction des systèmes d'information.</p>
+                        <button class="btn service-details-btn" data-service="41">En savoir plus</button>
+                    </div>
+                </div>
+            </div>
+            
+            <h3 class="service-category">XII. GESTION ET OPTIMISATION</h3>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-tasks"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Gestion de file d'attente</h3>
+                        <p>Solutions digitales pour organiser et gérer les files d'attente.</p>
+                        <button class="btn service-details-btn" data-service="42">En savoir plus</button>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-user-shield"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Gestion des accès et des identités</h3>
+                        <p>Solutions complètes pour le contrôle et la gestion des identités numériques.</p>
+                        <button class="btn service-details-btn" data-service="43">En savoir plus</button>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Protection des données</h3>
+                        <p>Stratégies et solutions pour la protection et la gouvernance des données.</p>
+                        <button class="btn service-details-btn" data-service="44">En savoir plus</button>
+                    </div>
+                </div>
+            </div>
+            
+            <h3 class="service-category">XIII. AUTRES SERVICES ET SOLUTIONS</h3>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Système de gestion de file d'attente</h3>
+                        <p>Solutions digitales pour organiser et gérer les files d'attente.</p>
+                        <button class="btn service-details-btn" data-service="45">En savoir plus</button>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Tracing GPS pour véhicules</h3>
+                        <p>Système de localisation et de suivi des véhicules.</p>
+                        <button class="btn service-details-btn" data-service="46">En savoir plus</button>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-desktop"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Services de supervision et monitoring</h3>
+                        <p>Surveillance continue de vos systèmes et applications.</p>
+                        <button class="btn service-details-btn" data-service="47">En savoir plus</button>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-print"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Impression 3D et prototypage</h3>
+                        <p>Services de conception et production additive pour vos prototypes.</p>
+                        <button class="btn service-details-btn" data-service="48">En savoir plus</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-info" id="contact">
+        <div class="container">
+            <h2>Contactez-nous</h2>
+            <div class="contact-details">
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <span>Pour devis: +241 62 71 03 91</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone-alt"></i>
+                    <span>Contacts directs: +241 65 59 20 47</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>contactsecretariat@otsigroupe</span>
+                </div>
+            </div>
+            <button class="btn" id="contactBtn">Nous contacter</button>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 OTSI GROUPE - ONA TECHNOLOGIE SECURITE INFORMATIQUE. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <!-- Modals -->
+    <div id="contactModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" id="closeContactModal">&times;</span>
+            <h2>Contactez-nous</h2>
+            <p>Pour toute demande de devis ou information, n'hésitez pas à nous contacter :</p>
+            <p><strong>Téléphone (devis):</strong> +241 62 71 03 91</p>
+            <p><strong>Téléphone (direct):</strong> +241 65 59 20 47</p>
+            <p><strong>Email:</strong> contactsecretariat@otsigroupe</p>
+        </div>
+    </div>
+
+    <div id="serviceModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" id="closeServiceModal">&times;</span>
+            <h2 id="serviceModalTitle">Titre du service</h2>
+            <div id="serviceModalContent">
+                <p>Contenu du service</p>
+            </div>
+
+            <button class="btn" id="whatsappBtn">
+                <i class="fab fa-whatsapp"></i> Nous contacter sur WhatsApp
+            </button>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript pour gérer les modales
+        document.addEventListener('DOMContentLoaded', function() {
+            const contactBtn = document.getElementById('contactBtn');
+            const devisBtn = document.getElementById('devisBtn');
+            const contactModal = document.getElementById('contactModal');
+            const closeContactModal = document.getElementById('closeContactModal');
+            const serviceModal = document.getElementById('serviceModal');
+            const closeServiceModal = document.getElementById('closeServiceModal');
+            const serviceDetailsBtns = document.querySelectorAll('.service-details-btn');
+            const serviceModalTitle = document.getElementById('serviceModalTitle');
+            const serviceModalContent = document.getElementById('serviceModalContent');
+            const whatsappBtn = document.getElementById('whatsappBtn');
+            
+            // Ouvrir la modale de contact
+            contactBtn.addEventListener('click', function() {
+                contactModal.style.display = 'flex';
+            });
+            
+            // Ouvrir la modale de contact via le bouton devis
+            devisBtn.addEventListener('click', function() {
+                contactModal.style.display = 'flex';
+            });
+            
+            // Fermer la modale de contact
+            closeContactModal.addEventListener('click', function() {
+                contactModal.style.display = 'none';
+            });
+            
+            // Fermer la modale de service
+            closeServiceModal.addEventListener('click', function() {
+                serviceModal.style.display = 'none';
+            });
+            
+            // Gérer les clics sur les boutons "En savoir plus"
+            serviceDetailsBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const serviceId = this.getAttribute('data-service');
+                    const serviceTitle = this.parentElement.querySelector('h3').textContent;
+                    
+                    serviceModalTitle.textContent = serviceTitle;
+                    serviceModalContent.innerHTML = `<p>Détails complets sur le service "${serviceTitle}". Pour plus d'informations ou pour demander un devis, n'hésitez pas à nous contacter.</p>`;
+                    
+                    serviceModal.style.display = 'flex';
+                });
+            });
+            
+            // Fermer les modales en cliquant à l'extérieur
+            window.addEventListener('click', function(event) {
+                if (event.target === contactModal) {
+                    contactModal.style.display = 'none';
+                }
+                if (event.target === serviceModal) {
+                    serviceModal.style.display = 'none';
+                }
+            });
+            
+            // Redirection WhatsApp
+            whatsappBtn.addEventListener('click', function() {
+                window.open('https://wa.me/24162710391', '_blank');
+            });
+            
+            // Scroll vers la section services
+            document.getElementById('servicesBtn').addEventListener('click', function() {
+                document.getElementById('services').scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
+</body>
+</html>
